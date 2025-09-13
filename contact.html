@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>CONTACT SENSOR</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body style="background-color: palegoldenrod;">
+    <main>
+        <figure>
+            <center>
+                <img src="CONTACT.png" height="750" width="1500">
+            </center>
+        </figure>
+        <article>
+            <h1>Contact Sensor — Detailed Overview</h1>
+
+            <li>Align the magnet and reed switch so they are close (manufacturer usually recommends alignment marks and
+                clearance
+                e.g., 2–5 mm).</li>
+
+            <li>Fix in place using screws or double-sided adhesive; test open/close with multimeter or control panel.
+            </li>
+
+            <li>If wired, route cable to control panel; use a pull resistor or connect to the alarm input as specified
+                (NC/NO).
+            </li>
+
+            <li>For wireless, insert battery and pair with the hub according to the hub's instructions; test range and
+                reliability.
+            </li>
+            </ol>
+
+
+
+
+            <h2>Example: Wiring to an Arduino (Simple)</h2>
+            <p>Use a reed switch as a digital input. Typical wiring uses one side of the switch to GND and the
+                other to a digital input pin with an internal pull-up enabled.</p>
+            // Arduino example
+            const int contactPin = 2; // reed switch connected to digital pin 2
+
+
+            void setup() {
+            pinMode(contactPin, INPUT_PULLUP); // internal pull-up resistor enabled
+            Serial.begin(9600);
+            }
+
+
+            void loop() {
+            int state = digitalRead(contactPin); // reads HIGH when open (pull-up), LOW when closed
+            if (state == LOW) {
+            Serial.println("Contact CLOSED (door/window shut)");
+            } else {
+            Serial.println("Contact OPEN (door/window open)");
+            }
+            delay(500);
+            }
+
+
+
+
+            <h2>Troubleshooting Tips</h2>
+            <ul>
+                <li>If the sensor reads incorrectly, check alignment and gap between magnet and switch.</li>
+                <li>Measure continuity with a multimeter while moving the magnet to confirm the reed switch is
+                    functioning.
+                </li>
+                <li>For unreliable wireless performance, move the hub closer or reduce interference sources; check
+                    battery
+                    voltage.</li>
+                <li>If you observe bouncing (rapid on/off toggles) implement a software debounce (e.g., ignore changes
+                    shorter than 20 ms).</li>
+            </ul>
+
+
+
+
+            <h2>Safety Notes</h2>
+            <ul>
+                <li>Do not use reed switches to switch mains power directly. Use a relay or solid-state driver for high
+                    voltages/currents.</li>
+                <li>Keep sensors away from very strong magnetic fields or ferrous debris that may interfere with
+                    operation.
+                </li>
+                <li>Protect the sensor from water ingress unless it is rated IP65 or higher.</li>
+            </ul>
+
+
+
+
+            <h2>Further Reading & Variations</h2>
+            <p>Other contact sensing methods include microswitches, hall-effect sensors (solid-state magnetic sensing),
+                and
+                optical sensors where contact is inferred by beam interruption. Choose the type that best fits
+                environmental
+                and reliability requirements.</p>
+                <p>
+                    The contact sensor is a simple yet effective device widely used in security systems, home automation, and various
+                    industrial applications. It primarily consists of a reed switch and a magnet, which work together to detect the opening or closing of doors, windows, or other movable objects. When the magnet is in close proximity to the reed switch, the switch remains closed, completing an electrical circuit. Conversely, when the magnet is moved away (indicating that a door or window has been opened), the reed switch opens, breaking the circuit and triggering an alert or action in the connected system. Contact sensors are valued for their reliability, simplicity, and low power consumption, making them ideal for battery-operated devices. They can be easily integrated into various systems, including home security alarms, smart home setups, and industrial monitoring solutions. Additionally, contact sensors can be configured to work with both wired and wireless systems, providing flexibility in installation and usage. Overall, the contact sensor is an essential component in modern security and automation technologies, offering a straightforward solution for monitoring access points and ensuring safety.
+                </p>
+    </main>
+    </article>
+    <footer>
+        <center>
+            <a href="index.html">BACK TO HOME PAGE</a>
+        </center>
+    </footer>
+
+
+</body>
+
+</html>
