@@ -1,16 +1,240 @@
-h1{
+body {
+    background-image: url();
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+h1 {
     background-color: cornsilk;
     text-align: center;
     color: black;
 }
-footer{
+
+footer {
     text-align: center;
     text-size-adjust: 50px;
 }
-h2{
-    background-color:lightsalmon;
+
+h2 {
+    background-color: lightsalmon;
     text-align: center;
     color: black;
 }
 
+a {
+    background-color: yellow;
+    text-align: center;
 
+}
+
+#aurdino1 {
+    background: linear-gradient(lightcyan, grey);
+    color: darkcyan;
+}
+
+#aurdino2 {
+    background: aquamarine;
+}
+
+#battery1 {
+    background: radial-gradient(lightcyan,
+
+            lightblue,
+            lightgrey,
+            white,
+            pink,
+            cyan,
+            lightgreen,
+            aqua);
+    color: black;
+    padding:25px;
+    border: 25px;
+    margin: 25px;
+}
+
+#battery2 {
+    background: radial-gradient(lightcyan,
+
+            lightblue,
+            lightgrey,
+            white,
+            pink,
+            cyan,
+            lightgreen,
+            aqua);
+    padding: 25px;
+    border: 25px;
+    margin: 25px;
+}
+
+#contact1 {
+    background: linear-gradient(to bottom cornsilk, coral, red);
+}
+
+#dcmotor {
+    background: radial-gradient(circle navy, red, blue);
+    background-color: aquamarine;
+    color: black;
+    text-align: center;
+    font-family: "Times New Roman";
+    text-transform: capitalize;
+    font-weight: bold;
+
+
+
+}
+
+#dm2 {
+    text-align: center;
+    text-transform: capitalize;
+    font-family: "Times New Roman";
+    text-transform: capitalize;
+    font-weight: bold;
+
+}
+
+#dm3 {
+    text-align: center;
+    text-transform: capitalize;
+    font-family: "Times New Roman";
+    text-transform: capitalize;
+    font-weight: bold;
+
+}
+
+#gearm1 {
+    background: radial-gradient(aquamarine, rgb(5, 248, 248), blanchedalmond);
+    text-shadow: 3px 2px 5px black;
+}
+
+#gearm2 {
+    background: radial-gradient(rgb(9, 212, 248), rgb(142, 233, 224), rgba(4, 194, 233, 0.633));
+    text-shadow: 3px 2px 5px black;
+
+}
+
+@keyframes table {
+    0% {
+        background-color: navy;
+    }
+
+    10% {
+        background-color: coral;
+    }
+
+    20% {
+        background-color: aquamarine;
+    }
+
+    30% {
+        background-color: brown;
+    }
+
+    40% {
+        background-color: mediumslateblue;
+    }
+
+    50% {
+        background-color: bisque;
+    }
+
+    60% {
+        background-color: blueviolet;
+    }
+
+    70% {
+        background-color: chartreuse;
+    }
+
+    80% {
+        background-color: chocolate;
+    }
+
+    90% {
+        background-color: cyan;
+    }
+
+    100% {
+        background-color: crimson;
+    }
+
+}
+
+#table {
+    background-color: cyan;
+    animation-name: table;
+    animation-duration: 40s;
+    border: 3px solid black;
+    border-radius: 25px;
+    opacity: 1;
+    
+
+
+}
+
+#lights {
+    background: radial-gradient(CIRCLE red, blue, yellow, green, purple, orange, pink, cyan, brown, lightgreen, lightblue, lightgrey, black, white, grey, magenta, navy, teal, lime, olive, maroon, silver, aqua, fuchsia);
+    background: radial-gradient(lightcyan,
+            blue,
+            yellow,
+            green,
+            orange,
+            pink,
+            cyan,
+            lightgreen,
+            lightblue,
+            lightgrey,
+            white,
+            grey,
+            magenta,
+            navy,
+            teal,
+            lime,
+            olive,
+            silver,
+            aqua, White, Ivory Light, Yellow, Light, Pink, Light, Orange, Gold, Light, Blue Sky, Blue, Cyan, Turquoise Light, Green Mint, Lime Medium, Green, Green, Olive Dark, Yellow, Orange, Coral, Salmon, Pink Medium, Blue, Blue Royal, Blue, Teal Dark, Green Forest, Green, Brown, Chocolate, Maroon Dark, Red Burgundy, Navy Midnight, Blue Dark, Purple, Black);
+    color: black;
+    text-shadow: 3px 2px 5px rgb(198, 128, 128);
+}
+
+#r {
+    /*registration*/
+    background-color: cyan;
+    animation-name: table;
+    animation-duration: 40s;
+    color: black;
+}
+
+#t {
+    /*temperature*/
+    background: linear-gradient(lightcyan, grey);
+    color: black;
+    text-shadow: 3px 2px 5px wheat;
+
+}
+
+a:hover {
+    background-color: lightgreen;
+    color: black;
+    font-size: 20px;
+    font-family: "Times New Roman";
+    font-weight: bold;
+    text-transform: capitalize;
+    text-align: center;
+    text-decoration: underline;
+    border: 2px solid black;
+}
+
+p::first-letter {
+    font-size: 19px;
+    font-weight: bold;
+    color: rgb(15, 15, 223);
+
+}
+
+article::first-letter {
+    font-size: 19px;
+    font-weight: bold;
+    color: rgb(223, 15, 178);
+}
